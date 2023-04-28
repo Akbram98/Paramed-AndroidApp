@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Paramed</string>
+    <string name="login_label1">Username:</string>
+    <string name="login_label2">Password:</string>
+    <string name="user_hint">Username</string>
+    <string name="passw_hint">Password</string>
+    <string name="authLogin">LOGIN</string>
+    <string name="loginTitle">Sign in</string>
+    <string name="userError">Enter username</string>
+    <string name="passError">Enter password</string>
+    <string name="loginError">Username or password incorrect</string>
+</resources>
