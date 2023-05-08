@@ -2,17 +2,34 @@ package com.example.paramed;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.AsyncTaskLoader;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.Buffer;
+import java.util.ArrayList;
 
 public class login extends AppCompatActivity {
     private Button login;
     private EditText username;
     private EditText password;
     private TextView errMsg;
+    private ArrayList<String> paramed_data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +49,79 @@ public class login extends AppCompatActivity {
                 if(password.getText().toString().equals(""))
                     password.setError(getResources().getString(R.string.passError));
                 else
-                    errMsg.setVisibility(View.VISIBLE);
+                    //NOTE: localhost must be changed to raw IPv4
+                    getJSON("http://localhost/getLoginData.php");
             }
         });
+    }
+
+    private void getJSON(final String urlWebService) {
+
+        class GetJSON extends AsyncTask<Void, Void, String> {
+
+            @Override
+            protected void onPreExecute() { super.onPreExecute(); };
+
+            @Override
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+
+                try {
+                    JSONArray ja = new JSONArray(s);
+                    for(int i = 0; i < ja.length(); i++){
+                        JSONObject obj = ja.getJSONObject(i);
+
+                        if(obj.getString("username").equals(username.getText().toString()) &&
+                            obj.getString("password").equals(password.getText().toString())){
+                            paramed_data = new ArrayList<>();
+
+                            paramed_data.add(obj.getString("firstname"));
+                            paramed_data.add(obj.getString("lastname"));
+                            paramed_data.add(username.getText().toString());
+                            paramed_data.add(password.getText().toString());
+
+                            break;
+                        }
+                    }
+
+                    if(paramed_data == null)
+                        errMsg.setVisibility(View.VISIBLE);
+                    else
+                        Toast.makeText(login.this, paramed_data.toString(), Toast.LENGTH_LONG).show();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            protected String doInBackground(Void... voids) {
+
+                try{
+                    URL url = new URL(urlWebService);
+                    HttpURLConnection con = (HttpURLConnection) url.openConnection();
+                    StringBuilder sb = new StringBuilder();
+                    BufferedReader bf = new BufferedReader(new InputStreamReader(con.getInputStream()));
+                    String json;
+
+                    while((json = bf.readLine()) != null){
+                        sb.append(json + "\n");
+                    }
+
+                    con.disconnect();
+                    return sb.toString().trim();
+
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }
+
+        GetJSON getJSON = new GetJSON();
+        getJSON.execute();
     }
 }
