@@ -9,4 +9,6 @@
     <string name="userError">Enter username</string>
     <string name="passError">Enter password</string>
     <string name="loginError">Username or password incorrect</string>
+    <string name="title_activity_display_patient_info">DisplayPatientInfo</string>
+
 </resources>
