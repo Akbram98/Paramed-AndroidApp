@@ -3,6 +3,7 @@ package com.example.paramed;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.AsyncTaskLoader;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -86,8 +87,12 @@ public class login extends AppCompatActivity {
 
                     if(paramed_data == null)
                         errMsg.setVisibility(View.VISIBLE);
-                    else
-                        Toast.makeText(login.this, paramed_data.toString(), Toast.LENGTH_LONG).show();
+                    else {
+                        Intent intent = new Intent(login.this, ParaPatientDashboard.class);
+                        intent.putExtra("ParamedicData", paramed_data);
+                        startActivity(intent);
+                       // Toast.makeText(login.this, paramed_data.toString(), Toast.LENGTH_LONG).show();
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
