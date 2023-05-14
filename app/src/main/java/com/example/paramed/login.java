@@ -1,11 +1,14 @@
 package com.example.paramed;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.content.AsyncTaskLoader;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,6 +44,27 @@ public class login extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         errMsg = (TextView) findViewById(R.id.errMsg);
+
+        username.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(errMsg.getVisibility() == View.VISIBLE) {
+                    errMsg.setVisibility(View.INVISIBLE);
+                    username.setBackgroundTintList(ContextCompat.getColorStateList(login.this, R.color.login_field));
+                    password.setBackgroundTintList(ContextCompat.getColorStateList(login.this, R.color.login_field));
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,8 +109,11 @@ public class login extends AppCompatActivity {
                         }
                     }
 
-                    if(paramed_data == null)
+                    if(paramed_data == null) {
                         errMsg.setVisibility(View.VISIBLE);
+                        username.setBackgroundTintList(ContextCompat.getColorStateList(login.this, R.color.error));
+                        password.setBackgroundTintList(ContextCompat.getColorStateList(login.this, R.color.error));
+                    }
                     else {
                         Intent intent = new Intent(login.this, ParaPatientDashboard.class);
                         intent.putExtra("ParamedicData", paramed_data);

@@ -12,4 +12,6 @@
     <color name="colorToolBarEnd">#164ED1</color>
     <color name="textColor">#FB26F0</color>
     <color name="lavender">#E6E6FA</color>
+    <color name="error">#800000</color>
+    <color name="login_field">#7AD7F0</color>
 </resources>
