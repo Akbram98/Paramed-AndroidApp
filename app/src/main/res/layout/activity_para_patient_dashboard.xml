@@ -10,9 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:background="@drawable/toolbar_header"/>
+
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,15 +33,16 @@
                     android:layout_height="35dp"
                     android:background="@drawable/ic_baseline_menu"
                     tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
                 <TextView
                     android:id="@+id/paramedic_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hello Paramedic"
                     android:layout_toRightOf="@id/menu"
-                    android:textSize="25sp"
                     android:paddingLeft="10dp"
-                    android:textColor="@color/white"/>
+                    android:text="Hello Paramedic"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
 
                 <EditText
                     android:id="@+id/patient_contact"
@@ -52,6 +55,7 @@
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/background"
                     android:drawableLeft="@drawable/ic_baseline_phone_24"
+                    android:drawableRight="@drawable/ic_baseline_search_24"
                     android:drawablePadding="15dp"
                     android:ems="10"
                     android:hint="Type patient's phone number"
@@ -61,15 +65,14 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Patient Info:"
                     android:layout_below="@+id/patient_contact"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="Patient Info:"
                     android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:gravity="center"/>
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </RelativeLayout>
-
 
             <GridLayout
                 android:layout_width="match_parent"
@@ -82,6 +85,7 @@
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
                     app:cardCornerRadius="16dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -92,44 +96,48 @@
                         android:padding="16dp"
                         tools:ignore="UseCompoundDrawables">
 
-                       <ImageView
+                        <ImageView
                             android:layout_width="65dp"
                             android:layout_height="65dp"
                             android:clickable="true"
-                            android:src="@drawable/user"/>
+                            android:src="@drawable/user" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Patient Name"
                             android:layout_marginBottom="10dp"
-                            android:textStyle="bold"
-                            android:textColor="@color/textColor"/>
+                            android:text="Patient Name"
+                            android:textColor="@color/textColor"
+                            android:textStyle="bold" />
 
                         <GridLayout
                             android:layout_width="match_parent"
                             android:layout_height="75dp"
+                            android:columnCount="3"
                             android:columnOrderPreserved="true"
-                            android:rowCount="1"
-                            android:columnCount="3">
+                            android:rowCount="1">
+
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 app:cardCornerRadius="16dp"
                                 app:cardElevation="4dp">
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:orientation="vertical"
                                     android:gravity="center"
+                                    android:orientation="vertical"
                                     android:padding="16dp">
+
                                     <TextView
                                         android:id="@+id/age"
-                                        android:layout_height="wrap_content"
                                         android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:text="00"
+                                        android:textColor="#007AD7"
                                         android:textSize="20sp"
-                                        android:textStyle="bold"
-                                        android:textColor="#007AD7"/>
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -146,14 +154,15 @@
                             <androidx.cardview.widget.CardView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                app:cardCornerRadius="16dp"
                                 android:layout_gravity="center"
+                                app:cardCornerRadius="16dp"
                                 app:cardElevation="4dp">
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:orientation="vertical"
                                     android:gravity="center"
+                                    android:orientation="vertical"
                                     android:padding="16dp">
 
                                     <TextView
@@ -178,20 +187,22 @@
                                 android:layout_height="wrap_content"
                                 app:cardCornerRadius="16dp"
                                 app:cardElevation="4dp">
+
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:orientation="vertical"
                                     android:gravity="center"
+                                    android:orientation="vertical"
                                     android:padding="16dp">
+
                                     <TextView
                                         android:id="@+id/gender"
-                                        android:layout_height="wrap_content"
                                         android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
                                         android:text="M/F"
+                                        android:textColor="#007AD7"
                                         android:textSize="20sp"
-                                        android:textStyle="bold"
-                                        android:textColor="#007AD7"/>
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -215,9 +226,10 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:columnCount="2"
                 android:columnOrderPreserved="true"
-                android:rowCount="2"
-                android:columnCount="2">
+                android:rowCount="2">
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -226,33 +238,33 @@
                     android:layout_margin="12dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:background="#30ffffff"
                         android:backgroundTint="#7AD7F0"
+                        android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <TextView
                             android:id="@+id/temp"
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
-                            android:text="0°C"
                             android:gravity="center"
-                            android:textSize="45sp"
                             android:paddingTop="20dp"
-                            android:textStyle="bold"
-                            />
+                            android:text="0°C"
+                            android:textSize="45sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
+                            android:gravity="center"
                             android:text="Temperature"
                             android:textColor="@color/textColor"
-                            android:gravity="center"
                             android:textSize="18sp" />
 
                     </LinearLayout>
@@ -266,24 +278,26 @@
                     android:layout_margin="12dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="#30ffffff"
                         android:backgroundTint="#7AD7F0"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
+
                         <TextView
                             android:id="@+id/heart"
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
-                            android:text="0%"
                             android:gravity="center"
-                            android:textSize="45sp"
                             android:paddingTop="20dp"
-                            android:textStyle="bold"
-                            />
+                            android:text="0%"
+                            android:textSize="45sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -303,24 +317,26 @@
                     android:layout_margin="12dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:background="#30ffffff"
                         android:backgroundTint="#7AD7F0"
+                        android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
+
                         <TextView
                             android:id="@+id/oxygen"
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
-                            android:text="0%"
                             android:gravity="center"
-                            android:textSize="45sp"
                             android:paddingTop="20dp"
-                            android:textStyle="bold"
-                            />
+                            android:text="0%"
+                            android:textSize="45sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -340,24 +356,26 @@
                     android:layout_margin="12dp"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="4dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
                         android:background="#30ffffff"
                         android:backgroundTint="#7AD7F0"
+                        android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp">
+
                         <TextView
                             android:id="@+id/glucose"
                             android:layout_width="wrap_content"
                             android:layout_height="80dp"
-                            android:text="0%"
                             android:gravity="center"
-                            android:textSize="45sp"
                             android:paddingTop="20dp"
-                            android:textStyle="bold"
-                            />
+                            android:text="0%"
+                            android:textSize="45sp"
+                            android:textStyle="bold" />
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
