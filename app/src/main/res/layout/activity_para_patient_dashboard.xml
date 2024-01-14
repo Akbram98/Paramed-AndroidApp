@@ -68,8 +68,8 @@
                     android:layout_below="@+id/patient_contact"
                     android:gravity="center"
                     android:text="Patient Info:"
-                    android:textAllCaps="true"
                     android:textColor="@color/white"
+                    android:textAllCaps="true"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -80,7 +80,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    android:layout_height="200dp"
+                    android:layout_height="195dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
@@ -90,7 +90,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#30ffffff"
-                        android:backgroundTint="#F1E5AC"
+                        android:backgroundTint="#7AD7F0"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:padding="16dp"
@@ -103,6 +103,7 @@
                             android:src="@drawable/user" />
 
                         <TextView
+                            android:id="@+id/patient_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
@@ -166,6 +167,7 @@
                                     android:padding="16dp">
 
                                     <TextView
+                                        android:id="@+id/location"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_below="@id/age"
