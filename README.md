@@ -3,7 +3,7 @@ Paramed - Health Care Android Application
 
 ## About the Project
 
-Paramed is an emergency centered application service which provides a platform for paramedics where they can view common patient vital readings while heading towards the location of the emergency. The rationale behind this is that paramedics, who already have an idea of their patient's physical state upon arrival of the scene, will be better prepared to handle the care of the patient. This was accomplished using android studio to build a paramedic authentication system and dashboard for displaying patient vital information, and building an IoT device by leveraging the interface and utilities of a raspberry Pi and a MAX30100 Pulse Oxymetry sensor.
+Paramed is an emergency centered application service which provides a platform for paramedics where they can view common patient vital readings while heading towards the location of the emergency. The rationale behind this is that paramedics, equipped with patient information even before arrival of the scene, would be better prepared to handle the care of the patient upon arrival. This would not only improve paramedic efficiency and responsiveness during an emergency but also improves their reliability and patient satisfaction.
 
 ### Built With
  - Android studio to create an authentication service and dashboard for paramedic authentication and patient vital information display
