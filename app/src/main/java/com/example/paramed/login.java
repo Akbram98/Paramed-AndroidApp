@@ -75,7 +75,7 @@ public class login extends AppCompatActivity {
                     password.setError(getResources().getString(R.string.passError));
                 else
                     //NOTE: localhost must be changed to raw IPv4
-                    getJSON("http://192.168.2.12/getLoginData.php");
+                    getJSON("http://localhost/getLoginData.php");
             }
         });
     }
