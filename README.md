@@ -10,7 +10,7 @@ Paramed is an emergency centered application service which provides a platform f
  - Wampserver service with MySQL for paramedic authentication
  - Firebase real-time database for real-time communication of IoT device and android application from the internet
  - An IoT device by leveraging the interface and functional utilities of a Raspberry Pi Microcontrolller and a MAX30100 Pulse Oxymetry Sensor
- - Python(maxRun.py) script to process MAX30102 blood oxygen raw readings into human-readable approximations and send to the firebase database for retrieval
+ - Python([maxRun.py](https://github.com/Akbram98/Paramed-AndroidApp/blob/master/app/maxRun.py)) script to process MAX30102 blood oxygen raw readings into human-readable approximations and send to the firebase database for retrieval
 
 ## Getting Started
 
