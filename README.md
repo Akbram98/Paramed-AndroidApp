@@ -29,6 +29,8 @@ Paramed is an emergency centered application service which provides a platform f
 - Firebase doesn't seem to work with latest version of google-services dependency. Use older version:
   ```sh
   id 'com.google.gms.google-services' version '4.3.8' apply false
-           
+
+ ## Project Demo
+ IF your interested in watching a demo of this project with no sound then here is the [link](https://drive.google.com/file/d/1EM7xl7EOJXe2wgTQs4uB0Ksur4w_-jwy/view?usp=sharing).
 
 
