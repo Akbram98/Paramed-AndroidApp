@@ -75,7 +75,7 @@ public class login extends AppCompatActivity {
                     password.setError(getResources().getString(R.string.passError));
                 else
                     //NOTE: localhost must be changed to raw IPv4
-                    getJSON("http://localhost/getLoginData.php");
+                    getJSON("http://192.168.2.12/getLoginData.php");
             }
         });
     }
@@ -115,7 +115,7 @@ public class login extends AppCompatActivity {
                         password.setBackgroundTintList(ContextCompat.getColorStateList(login.this, R.color.error));
                     }
                     else {
-                        Intent intent = new Intent(login.this, ParaPatientDashboard.class);
+                        Intent intent = new Intent(login.this, patientNumLookup.class);
                         intent.putExtra("ParamedicData", paramed_data);
                         startActivity(intent);
                        // Toast.makeText(login.this, paramed_data.toString(), Toast.LENGTH_LONG).show();

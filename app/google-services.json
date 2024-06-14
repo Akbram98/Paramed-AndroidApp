@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "671756431267",
+    "firebase_url": "https://paramed-ff260-default-rtdb.firebaseio.com",
+    "project_id": "paramed-ff260",
+    "storage_bucket": "paramed-ff260.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671756431267:android:5b7f18b1b4e231a2fc3416",
+        "android_client_info": {
+          "package_name": "com.example.paramed"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBocsgK49EV-sPhdA6zXt_G8tC_YnpaCxI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
