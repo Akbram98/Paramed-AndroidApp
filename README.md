@@ -1,5 +1,5 @@
-# Project Name
-Paramed - Health Care Android Application
+# Paramed - Health Care Android Application
+
 
 ## About the Project
 
