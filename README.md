@@ -27,7 +27,7 @@ Paramed is an emergency centered application service which provides a platform f
 - Download google_services.json file upon creation of real-time database and add to project
 - [Additional configuration Info](https://firebase.google.com/docs/android/setup)
 - Firebase doesn't seem to work with latest version of google-services dependency. Use older version:
-             id 'com.google.gms.google-services' version '4.3.8' apply false
+  ```id 'com.google.gms.google-services' version '4.3.8' apply false
            
 
 
