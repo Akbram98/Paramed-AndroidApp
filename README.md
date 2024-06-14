@@ -31,6 +31,6 @@ Paramed is an emergency centered application service which provides a platform f
   id 'com.google.gms.google-services' version '4.3.8' apply false
 
  ## Project Demo
- If you are interested in watching a demo of this project then here is the [link](https://drive.google.com/file/d/1EM7xl7EOJXe2wgTQs4uB0Ksur4w_-jwy/view?usp=sharing). WARNING: This video has no sound! Watch on 2X speed recommended
+ If you are interested in watching a demo of this project then here is the [link](https://drive.google.com/file/d/1EM7xl7EOJXe2wgTQs4uB0Ksur4w_-jwy/view?usp=sharing). WARNING: This video has no sound! Watch on 2x speed recommended
 
 
