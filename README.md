@@ -3,14 +3,14 @@
 
 ## About the Project
 
-Paramed is an emergency centered application service which provides a platform for paramedics where they can view common patient vital readings while heading towards the location of the emergency. The rationale behind this is that paramedics, equipped with patient information even before arrival of the scene, would be better prepared to handle the care of the patient upon arrival. This would not only improve paramedic efficiency and responsiveness during an emergency but also improves their reliability and patient satisfaction.
+Paramed is an emergency-focused application designed to provide paramedics with real-time access to critical patient vital signs while en route to an emergency scene. The application enables paramedics to review essential patient information before arriving at the location, enhancing their preparedness and efficiency in delivering care. By equipping paramedics with advance knowledge, Paramed aims to improve response times, increase operational effectiveness, and boost patient satisfaction.
 
 ### Built With
- - Android studio to create an authentication service and dashboard for paramedic authentication and patient vital information display
- - Wampserver service with MySQL for paramedic authentication
- - Firebase real-time database for real-time communication of IoT device and android application from the internet
- - An IoT device by leveraging the interface and functional utilities of a Raspberry Pi Microcontrolller and a MAX30102 Pulse Oxymetry Sensor
- - Python([maxRun.py](https://github.com/Akbram98/Paramed-AndroidApp/blob/master/app/maxRun.py)) script to process MAX30102 blood oxygen raw readings into human-readable approximations and send to the firebase database for retrieval
+ - **Android Studio**: Developed an authentication service and dashboard for paramedics to access and display patient vital information.
+ - **WampServer and MySQL**: Implemented paramedic authentication using WampServer with a MySQL database.
+ - **Firebase Real-Time Database**: Enabled real-time communication between the IoT device and the Android application over the internet.
+ - **IoT Device**: Utilized a Raspberry Pi microcontroller and a MAX30102 Pulse Oximetry Sensor to capture vital signs.
+ - **Python Script ([maxRun.py](https://github.com/Akbram98/Paramed-AndroidApp/blob/master/app/maxRun.py))**: Processed raw blood oxygen readings from the MAX30102 sensor into human-readable data and sent it to the Firebase database for retrieval.
 
 ## Getting Started
 
